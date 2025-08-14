@@ -1,0 +1,309 @@
+/* =========================
+   RESETEO Y ESTILOS BASE
+   ========================= */
+* {
+    margin: 1px;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente general */
+    background: #00040A; /* Color de fondo de toda la página */
+    line-height: 1.; /* Espaciado de líneas */
+}
+
+/*ENCABEZADO */
+header {
+    background: url('header.jpg') no-repeat center center/cover; /* Imagen de fondo */
+    display: flex; /* Centrado horizontal y vertical */
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF; /* Texto blanco */
+    text-shadow: 3px 1px 3px rgba(0,0,0,0.7); /* Sombra al texto */
+    margin-bottom: 5px; /* Separación del contenido */
+.menu-toggle {
+    display:none;
+    background:#222;
+    color:#f4fc85;
+    border:none;
+    font-size:2rem;
+    padding:8px 16px;
+    border-radius:8px;
+    margin:10px auto 0 10px;
+    cursor:pointer;
+}
+.menu-links {
+    display:flex;
+    flex-direction:row;
+    gap:24px;
+    width:auto;
+}
+    display: flex;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 2rem; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    margin: 1px; /* Sin margen */
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+}
+    .menu-toggle {
+        display:block;
+    }
+    .menu-links {
+        display:none;
+        flex-direction:column;
+        width:100%;
+        background:#222;
+        border-radius:0 0 16px 16px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.10);
+        margin-top:5px;
+        gap:0;
+    }
+    #side-menu.open .menu-links {
+        display:flex;
+    }
+    .menu-links a {
+        width:100%;
+        text-align:left;
+        padding:12px 18px;
+        font-size:1rem;
+        border-radius:0;
+        box-shadow:none;
+        margin:0;
+    }
+
+
+/*   CONTENEDOR DE ARTÍCULOS */
+.articulos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los cuadros bajen si no caben */
+    gap: 40px; /* Espacio entre cuadros */
+    padding: 5px; /* Espacio interno */
+    align-items: stretch; /* Igualar alturas */
+}
+
+/* CUADROS*/
+.articulos article {
+    background: #d4c8c8; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 6px rgba(90,30,30,0.2); /* Sombra suave */
+    flex: 1 1 320px; /* Ajuste flexible con ancho base */
+    min-width: 50px; /* Ancho mínimo */
+    display: flex;
+    flex-direction: column;
+    color: #222; /* Color de texto */
+    transition: transform 0.3s; /* Animación al pasar el mouse */
+    overflow: hidden; /* Oculta contenido sobrante */
+}
+
+/* Animación al pasar el mouse por un cuadro */
+.articulos article:hover { 
+    transform: scale(1.05);
+}
+
+/* IMÁGENES DENTRO DE ARTICLE */
+.articulos img {
+    width: 100%; /* Ocupa todo el ancho */ ;
+    object-fit: cover; /* Recorte proporcional */
+}
+
+/* TÍTULOS DE ARTÍCULO*/
+.articulos h2 {
+    font-size: 1.2rem; /* Tamaño de letra */
+    font-weight: bold; /* Negrita */
+    color: #222; /* Color de texto */
+    background: #f4fc85; /* Fondo */
+    padding: 5px; /* Espaciado interno */
+    margin: 0   ; /* Sin margen */
+}
+
+/*PÁRRAFOS DE ARTÍCULO*/
+.articulos p {
+    font-size: 1rem;
+    color: #222;
+    background: #d4c8c8;
+    padding: 10px;
+    margin: 0;
+}
+
+/* ENLACES DENTRO DE ARTÍCULO*/
+.articulos a {
+    text-decoration: none; /* Sin subrayado */
+    color: inherit; /* Mantiene el color del texto */
+}
+
+/*PIE DE PÁGINA */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 15px 20px 15px;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .articulos {
+        gap: 20px;
+        padding: 10px 10px;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        height: 120px !important;
+    }
+    header h1 {
+        font-size: 1.3rem !important;
+        flex-direction: column;
+    }
+    .articulos {
+        flex-direction: column;
+        gap: 16px;
+        padding: 5px;
+    }
+    .articulos article {
+        min-width: unset;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .articulos img {
+        height: 180px !important;
+        object-fit: contain !important;
+    }
+}
+
+.footer-legal {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.footer-links {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+.footer-links a {
+    color: #f4fc85;
+    text-decoration: underline;
+    margin: 0 5px;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #fff;
+}
+.footer-social {
+    margin-top: 10px;
+}
+.footer-social .social-icon {
+    display: inline-block;
+    margin: 0 8px;
+    vertical-align: middle;
+}
+.footer-social img {
+    width: 32px;
+    height: 32px;
+    filter: invert(1) brightness(1.5);
+    transition: filter 0.2s;
+}
+.footer-social .social-icon:hover img {
+    filter: invert(0.7) sepia(1) saturate(5) hue-rotate(180deg);
+}
+
+
+/* Menú de navegación superior responsive */
+#side-menu {
+    width:100%;
+    background:#222;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:24px;
+    padding:18px 0 12px 0;
+    margin-bottom:20px;
+    border-radius:16px 16px 16px 16px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.10);
+    position:relative;
+    z-index:10;
+}
+#side-menu a {
+    color:#f4fc85;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1.08rem;
+    padding:8px 22px;
+    border-radius:8px;
+    transition:background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow:0 1px 4px rgba(0,0,0,0.08);
+    letter-spacing:0.5px;
+}
+#side-menu a:hover {
+    background:#f4fc85;
+    color:#222;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Menú hamburguesa solo CSS */
+.menu-toggle {
+    display:none;
+}
+.menu-icon {
+    display:none;
+    font-size:2rem;
+    color:#f4fc85;
+    background:#222;
+    border-radius:8px;
+    padding:8px 16px;
+    cursor:pointer;
+    margin-left:10px;
+}
+.menu-links {
+    display:flex;
+    flex-direction:row;
+    gap:24px;
+    width:auto;
+}
+
+@media (max-width: 600px) {
+    #side-menu {
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+        padding:0;
+        margin-bottom:10px;
+        border-radius:0;
+        box-shadow:none;
+        background:transparent;
+        position:relative;
+    }
+    .menu-icon {
+        display:block;
+    }
+    .menu-links {
+        display:none;
+        flex-direction:column;
+        width:100%;
+        background:#222;
+        border-radius:0 0 16px 16px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.10);
+        margin-top:5px;
+        gap:0;
+    }
+    .menu-toggle:checked ~ .menu-icon + .menu-links {
+        display:flex;
+    }
+    .menu-links a {
+        width:100%;
+        text-align:left;
+        padding:12px 18px;
+        font-size:1rem;
+        border-radius:0;
+        box-shadow:none;
+        margin:0;
+    }
+}
