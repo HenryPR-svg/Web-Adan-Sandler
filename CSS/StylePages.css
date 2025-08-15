@@ -8,14 +8,12 @@
 }
 
 body {
-    font-family: 'Popins', sans-serif; /* Fuente general */
-    background: #121212; /* Color de fondo de toda la página */
-    line-height: 1.; /* Espaciado de líneas */
-    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif; /* Fuente general */
+    background: #080A13; /* Color de fondo de toda la página */
+    line-height: 1.2; /* Espaciado de líneas */
 }
 
 /*ENCABEZADO */
-
 header {
     background: url('header.jpg') no-repeat center center/cover; /* Imagen de fondo */
     display: flex; /* Centrado horizontal y vertical */
@@ -24,6 +22,23 @@ header {
     color: #FFFFFF; /* Texto blanco */
     text-shadow: 3px 1px 3px rgba(0,0,0,0.7); /* Sombra al texto */
     margin-bottom: 5px; /* Separación del contenido */
+.menu-toggle {
+    display:none;
+    background:#080A13;
+    color:#757c0a;
+    border:none;
+    font-size:2rem;
+    padding:8px 16px;
+    border-radius:8px;
+    margin:10px auto 0 10px;
+    cursor:pointer;
+}
+.menu-links {
+    display:flex;
+    flex-direction:row;
+    gap:24px;
+    width:auto;
+}
     display: flex;
     border-radius: 10px;
 }
@@ -33,13 +48,39 @@ h1 {
     margin: 1px; /* Sin margen */
     position: absolute;
     top: 50%;
-    left: 25%;
+    left: 50%;
     transform: translate(-50%,-50%);
 }
+    .menu-toggle {
+        display:block;
+    }
+    .menu-links {
+        display:none;
+        flex-direction:column;
+        width:100%;
+        background:#080A13;
+        border-radius:0 0 16px 16px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.10);
+        margin-top:5px;
+        gap:0;
+    }
+    #side-menu.open .menu-links {
+        display:flex;
+    }
+    .menu-links a {
+        width:100%;
+        text-align:left;
+        padding:12px 18px;
+        font-size:1rem;
+        border-radius:0;
+        box-shadow:none;
+        margin:0;
+    }
 
 
 /*   CONTENEDOR DE ARTÍCULOS */
 .articulos {
+    background-color: #080A13;
     display: flex;
     flex-wrap: wrap; /* Permite que los cuadros bajen si no caben */
     gap: 40px; /* Espacio entre cuadros */
@@ -49,9 +90,9 @@ h1 {
 
 /* CUADROS*/
 .articulos article {
-    background: #8f8e8e; /* Fondo blanco */
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0 2px 6px rgba(90,30,30,0.2); /* Sombra suave */
+    background: #080A13; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2); /* Sombra suave */
     flex: 1 1 320px; /* Ajuste flexible con ancho base */
     min-width: 50px; /* Ancho mínimo */
     display: flex;
@@ -63,8 +104,7 @@ h1 {
 
 /* Animación al pasar el mouse por un cuadro */
 .articulos article:hover { 
-     transform: scale(1.03);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transform: scale(1.05);
 }
 
 /* IMÁGENES DENTRO DE ARTICLE */
@@ -77,8 +117,8 @@ h1 {
 .articulos h2 {
     font-size: 1.2rem; /* Tamaño de letra */
     font-weight: bold; /* Negrita */
-    color: #222; /* Color de texto */
-    background: #f4fc85; /* Fondo */
+    color: #faf6f6; /* Color de texto */
+    background: #080A13; /* Fondo */
     padding: 5px; /* Espaciado interno */
     margin: 0   ; /* Sin margen */
 }
@@ -86,8 +126,8 @@ h1 {
 /*PÁRRAFOS DE ARTÍCULO*/
 .articulos p {
     font-size: 1rem;
-    color: #222;
-    background: #8f8e8e;
+    color: #ffffff;
+    background:#080A13;
     padding: 10px;
     margin: 0;
 }
@@ -100,8 +140,8 @@ h1 {
 
 /*PIE DE PÁGINA */
 footer {
-    background: #333;
-    color: #fff;
+    background: #1A1D25;
+    color: #DAD7BC;
     text-align: center;
     padding: 30px 15px 20px 15px;
     margin-top: 20px;
@@ -109,13 +149,13 @@ footer {
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 900px) {
+@media (max-width: 300px) {
     .articulos {
         gap: 20px;
         padding: 10px 10px;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 200px) {
     header {
         height: 120px !important;
     }
@@ -149,13 +189,13 @@ footer {
     font-size: 0.95rem;
 }
 .footer-links a {
-    color: #f4fc85;
+    color: #DAD7BC;
     text-decoration: underline;
     margin: 0 5px;
     transition: color 0.2s;
 }
 .footer-links a:hover {
-    color: #fff;
+    color: #ffffff;
 }
 .footer-social {
     margin-top: 10px;
@@ -179,7 +219,7 @@ footer {
 /* Menú de navegación superior responsive */
 #side-menu {
     width:100%;
-    background:#222;
+    background:#080A13;
     display:flex;
     flex-direction:row;
     justify-content:center;
@@ -193,7 +233,7 @@ footer {
     z-index:10;
 }
 #side-menu a {
-    color:#f4fc85;
+    color:#fafaf7;
     text-decoration:none;
     font-weight:bold;
     font-size:1.08rem;
@@ -204,10 +244,11 @@ footer {
     letter-spacing:0.5px;
 }
 #side-menu a:hover {
-    background:#f4fc85;
-    color:#222;
+    background:#366fc5;
+    color:#000000;
     box-shadow:0 2px 8px rgba(0,0,0,0.15);
 }
+
 /* Menú hamburguesa solo CSS */
 .menu-toggle {
     display:none;
@@ -216,7 +257,7 @@ footer {
     display:none;
     font-size:2rem;
     color:#f4fc85;
-    background:#222;
+    background:#000000;
     border-radius:8px;
     padding:8px 16px;
     cursor:pointer;
@@ -228,10 +269,12 @@ footer {
     gap:24px;
     width:auto;
 }
-@media (max-width: 600px) {
+
+@media (max-width:475px) {
     #side-menu {
+        text-align: right;
         flex-direction:column;
-        align-items:flex-start;
+        align-items:flex-end;
         gap:0;
         padding:0;
         margin-bottom:10px;
@@ -241,13 +284,13 @@ footer {
         position:relative;
     }
     .menu-icon {
-        display:block;
+        display:block;;
     }
     .menu-links {
         display:none;
         flex-direction:column;
         width:100%;
-        background:#222;
+        background:#070707;
         border-radius:0 0 16px 16px;
         box-shadow:0 2px 8px rgba(0,0,0,0.10);
         margin-top:5px;
