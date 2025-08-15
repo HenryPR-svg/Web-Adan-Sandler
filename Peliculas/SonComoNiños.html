@@ -12,7 +12,7 @@
 
     <!-- Encabezado de la página con imagen y título centrado -->
     <header style="position:relative; height: 300px; width:100%; overflow:hidden;">
-        <img src="/Imagenes/Adam.jpg" alt="Imagen del encabezado" style="width:100%; height:150%; object-fit:cover; display:block;">
+    <img src="../Imagenes/Adam.jpg" alt="Imagen del encabezado" style="width:100%; height:150%; object-fit:cover; display:block;">
         <h1>Adam Sandler</h1>
     </header>
     <!-- Menú de navegación superior -->
@@ -20,28 +20,47 @@
         <input type="checkbox" id="menu-toggle" class="menu-toggle" />
         <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú">&#9776;</label>
         <div class="menu-links">
-            <a href="/Ejercicio01.html">Inicio</a>
-            <a href="/Peliculas/HappyGilmore.html">Happy Gilmore</a>
-            <a href="/Peliculas/UnPapaGenial.html">Un papá genial</a>
-            <a href="/Peliculas/SonComoNiños.html">Son como niños</a>
+               <a href="../Ejercicio01.html">Inicio</a>
+            <a href="">Peliculas </a>
+            <a href="">Series</a>
+            <a href="">Pronto..</a>
         </div>
     </nav>
 
-    <main>
-        <!-- Sección de artículos (cuadros de películas) -->
-        <section class="articulos">
-           
-    
-            
-            <!-- Tercer cuadro: Son como niños -->
-            <article>
-                <a>
-                    <img src="/Imagenes/Son como niños.jpg" alt="Son como niños">
-                    <center><h2>Son como niños</h2></center>
-                <center><p> Un grupo de amigos de la infancia que se reúnen después de muchos años para asistir al funeral de su entrenador de baloncesto. La reunión desencadena una serie de eventos cómicos mientras los amigos, ahora adultos, redescubren su amistad y se comportan como niños otra vez.</p></center> 
-                </a>
+     <main>
+        <div class="pelicula-flex">
+            <section class="articulos">
+                <article style="display: flex; align-items: center; gap: 24px;">
+                    <a href="SonComoNiños.html" style="display: block;">
+                        <img src="../Imagenes/Son como niños.jpg" alt="Son como niños" style="max-width: 220px; height: auto; display: block;">
+                    </a>
+                    <div>
+                        <h2 style="text-align:center;">Son como niños</h2>
+                        <p>Sinopsis: Un grupo de amigos de la infancia que se reúnen después de muchos años para asistir al funeral de su entrenador de baloncesto. La reunión desencadena una serie de eventos cómicos mientras los amigos, ahora adultos, redescubren su amistad y se comportan como niños otra vez.</p>
+                       
+                    </div>
+                </article>
+                <article style="display: flex; align-items: center; gap: 24px;">
+                <h2>Trailer Son como niños</h2>
+                <iframe width="560" height="315"
+  src="https://www.youtube.com/embed/FSAMw7m9QRA"
+  title="Son Como Niños – Tráiler (subtítulos en español)"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+  style="display: block; margin: 20px auto;">
+</iframe>
+
+                     <p><strong>Género:</strong> Comedia, Familia</p>
+                        <p><strong>Año de lanzamiento:</strong> 2010</p>
+                        <p><strong>Estrellas:</strong> ★★★★☆ (4/5)</p>
+                        <p><strong>Ver película:</strong>
+                            <a href="https://www.primevideo.com/detail/0LKLKLKLKLKLKLK" target="_blank">Prime Video</a> |
+                            <a href="https://www.netflix.com/title/70117539" target="_blank">Netflix</a>
+                        </p>
             </article>
-        </section>
+            </section>
+        </div>
     </main>
 
     <!-- Pie de página -->

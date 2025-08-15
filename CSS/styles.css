@@ -89,7 +89,7 @@ h1 {
 
 /* CUADROS*/
 .articulos article {
-    background: #d4c8c8; /* Fondo blanco */
+    background: #8f8e8e; /* Fondo blanco */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 2px 6px rgba(90,30,30,0.2); /* Sombra suave */
     flex: 1 1 320px; /* Ajuste flexible con ancho base */
@@ -126,7 +126,7 @@ h1 {
 .articulos p {
     font-size: 1rem;
     color: #222;
-    background: #d4c8c8;
+    background: #8f8e8e;
     padding: 10px;
     margin: 0;
 }

@@ -12,7 +12,7 @@
 
     <!-- Encabezado de la página con imagen y título centrado -->
     <header style="position:relative; height: 300px; width:100%; overflow:hidden;">
-        <img src="/Imagenes/Adam.jpg" alt="Imagen del encabezado" style="width:100%; height:150%; object-fit:cover; display:block;">
+    <img src="../Imagenes/Adam.jpg" alt="Imagen del encabezado" style="width:100%; height:150%; object-fit:cover; display:block;">
         <h1>Adam Sandler</h1>
     </header>
     <!-- Menú de navegación superior -->
@@ -20,27 +20,46 @@
         <input type="checkbox" id="menu-toggle" class="menu-toggle" />
         <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú">&#9776;</label>
         <div class="menu-links">
-            <a href="/Ejercicio01.html">Inicio</a>
-            <a href="/Peliculas/HappyGilmore.html">Happy Gilmore</a>
-            <a href="/Peliculas/UnPapaGenial.html">Un papá genial</a>
-            <a href="/Peliculas/SonComoNiños.html">Son como niños</a>
+                <a href="../Ejercicio01.html">Inicio</a>
+            <a href="">Peliculas </a>
+            <a href="">Series</a>
+            <a href="">Pronto..</a>
         </div>
     </nav>
 
-    <main>
-        <!-- Sección de artículos (cuadros de películas) -->
-        <section class="articulos">
-           
-            <!-- Segundo cuadro: Un papá genial -->
-            <article>
-                <a>
-                    <img src="/Imagenes/UnPapaGenial.jpg" alt="Un papá genial">
-                    <center><h2>Un papá genial</h2></center>
-                    <center><p>Sonny intentando demostrar que es capaz de asumir responsabilidades, pero termina enfrentando los desafíos de la paternidad con consecuencias inesperadas. </p></center>
-                </a>
+     <main>
+        <div class="pelicula-flex">
+            <section class="articulos">
+                <article style="display: flex; align-items: center; gap: 24px;">
+                    <a href="UnPapaGenial.html" style="display: block;">
+                        <img src="../Imagenes/UnPapaGenial.jpg" alt="Un papa genial" style="max-width: 220px; height: auto; display: block;">
+                    </a>
+                    <div>
+                        <h2 style="text-align:center;">Un papa genial</h2>
+                        <p>Sipnosis: Sonny Koufax, un hombre inmaduro y despreocupado, decide hacerse cargo del pequeño Julian para impresionar a su novia. Sin experiencia como padre, Sonny enfrenta divertidas y emotivas situaciones mientras aprende el verdadero significado de la responsabilidad y el amor familiar.</p>
+                    </div>
+                </article>
+                <article style="display: flex; align-items: center; gap: 24px;">
+                <h2>Trailer de Un papa genial</h2>
+                <iframe width="560" height="315"
+  src="https://www.youtube.com/embed/mY1pyaDU5uc"
+  title="Trailer de Un Papá Genial (Big Daddy)"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+  style="display:block; margin: 20px auto;">
+</iframe>
+
+                    <p><strong>Género:</strong> Comedia, Drama</p>
+                    <p><strong>Año de lanzamiento:</strong> 1999</p>
+                    <p><strong>Estrellas:</strong> ★★★★☆ (4/5)</p>
+                    <p><strong>Ver película:</strong>
+                        <a href="https://www.primevideo.com/detail/0KRGZKQKJQJQKQ" target="_blank">Prime Video</a> |
+                        <a href="https://www.netflix.com/title/60000413" target="_blank">Netflix</a>
+                    </p>
             </article>
-           
-        </section>
+            </section>
+        </div>
     </main>
 
     <!-- Pie de página -->

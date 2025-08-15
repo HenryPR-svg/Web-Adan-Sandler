@@ -8,9 +8,10 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif; /* Fuente general */
-    background: #00040A; /* Color de fondo de toda la página */
+    font-family: 'Popins', sans-serif; /* Fuente general */
+    background: #121212; /* Color de fondo de toda la página */
     line-height: 1.; /* Espaciado de líneas */
+    color: #f5f5f5;
 }
 
 /*ENCABEZADO */
@@ -48,8 +49,8 @@ h1 {
 
 /* CUADROS*/
 .articulos article {
-    background: #d4c8c8; /* Fondo blanco */
-    border-radius: 10px; /* Bordes redondeados */
+    background: #8f8e8e; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
     box-shadow: 0 2px 6px rgba(90,30,30,0.2); /* Sombra suave */
     flex: 1 1 320px; /* Ajuste flexible con ancho base */
     min-width: 50px; /* Ancho mínimo */
@@ -62,7 +63,8 @@ h1 {
 
 /* Animación al pasar el mouse por un cuadro */
 .articulos article:hover { 
-    transform: scale(1.05);
+     transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
 
 /* IMÁGENES DENTRO DE ARTICLE */
@@ -85,7 +87,7 @@ h1 {
 .articulos p {
     font-size: 1rem;
     color: #222;
-    background: #d4c8c8;
+    background: #8f8e8e;
     padding: 10px;
     margin: 0;
 }

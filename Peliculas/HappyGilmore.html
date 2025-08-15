@@ -12,7 +12,7 @@
 
     <!-- Encabezado de la página con imagen y título centrado -->
     <header style="position:relative; height: 300px; width:100%; overflow:hidden;">
-        <img src="/Imagenes/Adam.jpg" alt="Imagen del encabezado" style="width:100%; height:150%; object-fit:cover; display:block;">
+    <img src="../Imagenes/Adam.jpg" alt="Imagen del encabezado" style="width:100%; height:150%; object-fit:cover; display:block;">
         <h1>Adam Sandler</h1>
     </header>
     <!-- Menú de navegación superior -->
@@ -20,27 +20,55 @@
         <input type="checkbox" id="menu-toggle" class="menu-toggle" />
         <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú">&#9776;</label>
         <div class="menu-links">
-            <a href="/Ejercicio01.html">Inicio</a>
-            <a href="/Peliculas/HappyGilmore.html">Happy Gilmore</a>
-            <a href="/Peliculas/UnPapaGenial.html">Un papá genial</a>
-            <a href="/Peliculas/SonComoNiños.html">Son como niños</a>
+               <a href="../Ejercicio01.html">Inicio</a>
+            <a href="">Peliculas </a>
+            <a href="">Series</a>
+            <a href="">Pronto..</a>
         </div>
     </nav>
 
     <main>
-        <!-- Sección de artículos (cuadros de películas) -->
-        <section class="articulos">
-            <!-- Primer cuadro: Happy Gilmore -->
-            <article>
-                <a>
-                    <img src="/Imagenes/Happy gilmore.jpg" alt="Happy Gilmore">
-                    <center><h2>Happy Gilmore</h2>
-                <center><p>Es una comedia deportiva de 1996 sobre un jugador de hockey frustrado que, debido a deudas de su abuela, descubre su talento para el golf y decide competir profesionalmente para salvar su casa.</p></center> 
-                </a>
+        <div class="pelicula-flex">
+            <section class="articulos">
+                <article style="display: flex; align-items: center; gap: 24px;">
+                    <a href="HappyGilmore.html" style="display: block;">
+                        <img src="../Imagenes/Happy gilmore.jpg" alt="Happy Gilmore" style="max-width: 220px; height: auto; display: block;">
+                    </a>
+                    <div>
+                        <h2 style="text-align:center;">Happy Gilmore</h2>
+                        <p>Sinopsis: Un jugador de hockey frustrado se convierte en un talentoso golfista para salvar la casa de su abuela.</p>
+                        
+                    </div>
+                </article>
+                <article style="display: flex; align-items: center; gap: 24px;">
+                <h2>Trailer de Happy Gilmore</h2>
+                <iframe width="560" height="315"
+  src="https://www.youtube.com/embed/y1emDAYCfVQ"
+  title="Happy Gilmore Official Trailer #1 (1996)"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+  style="display:block; margin: 20px auto;">
+</iframe>
+
+                 <p><strong>Género:</strong> Comedia, Deportes</p>
+                        <p><strong>Año de lanzamiento:</strong> 1996</p>
+                        <p><strong>Estrellas:</strong> ★★★★☆ (4/5)</p>
+                        <p><strong>Ver película:</strong>
+                            <a href="https://www.primevideo.com/detail/0JYJYJYJYJYJYJY" target="_blank">Prime Video</a> |
+                            <a href="https://www.netflix.com/title/70002514" target="_blank">Netflix</a>
+                        </p>
             </article>
-            <!-- Segundo cuadro: Un papá genial -->
-          
-        </section>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-legal">
+            <p>© 2025. Univision Communications, Inc. Reservados todos los derechos.<br>
+            
+        </div>
     </main>
 
     <!-- Pie de página -->
