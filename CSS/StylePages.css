@@ -300,3 +300,33 @@ footer {
         margin:0;
     }
 }
+/* ESTILOS DE LOS BOTONES DE STREAMING */
+a.btn-stream-prime {
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:10px 10px;
+    background:#3e233200;
+}
+a.btn-stream-netflix {
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:10px 10px;
+    background:#221d1d00;
+
+}
+
+/* Ajusta los iconos de streaming para que no se recorten */
+a.btn-stream-prime img,
+a.btn-stream-netflix img {
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    border-radius: 8px;
+    background: #00000000; /* Opcional: fondo blanco para mejor contraste */
+    padding: 2px;     /* Espacio interno para evitar recortes */
+    box-sizing: content-box;
+    overflow: visible;
+}
+
