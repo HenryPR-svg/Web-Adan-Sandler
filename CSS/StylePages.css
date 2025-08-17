@@ -1,3 +1,20 @@
+/* Iframes de YouTube responsivos */
+.video-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
 /* =========================
    RESETEO Y ESTILOS BASE
    ========================= */
@@ -21,7 +38,9 @@ header {
     align-items: center;
     color: #FFFFFF; /* Texto blanco */
     text-shadow: 3px 1px 3px rgba(0,0,0,0.7); /* Sombra al texto */
-    margin-bottom: 5px; /* Separación del contenido */
+    margin-bottom: 10px; /* Separación del contenido */
+    border-radius: 12px;
+
 .menu-toggle {
     display:none;
     background:#080A13;
@@ -100,7 +119,7 @@ h1 {
     color: #222; /* Color de texto */
     overflow: visible;
     transition: transform 0.3s; /* Animación al pasar el mouse */
-    overflow: hidden; /* Oculta contenido sobrante */
+   /* overflow: hidden; /* Oculta contenido sobrante */
 }
 
 /* Animación al pasar el mouse por un cuadro */
@@ -149,37 +168,6 @@ footer {
     padding: 30px 15px 20px 15px;
     margin-top: 20px;
     font-size: 0.95rem;
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 300px) {
-    .articulos {
-        gap: 20px;
-        padding: 10px 10px;
-    }
-}
-@media (max-width: 200px) {
-    header {
-        height: 120px !important;
-    }
-    header h1 {
-        font-size: 1.3rem !important;
-        flex-direction: column;
-    }
-    .articulos {
-        flex-direction: column;
-        gap: 16px;
-        padding: 5px;
-    }
-    .articulos article {
-        min-width: unset;
-        width: 100%;
-        margin: 0 auto;
-    }
-    .articulos img {
-        height: 180px !important;
-        object-fit: contain !important;
-    }
 }
 
 .footer-legal {
